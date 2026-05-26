@@ -1,18 +1,14 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt") // Necesario para que Room procese las anotaciones
+    id("org.jetbrains.kotlin.plugin.compose") // <-- AGREGA ESTA LÍNEA SIN LA VERSIÓN
+    kotlin("kapt")
 }
-
 android {
     // ... tus configuraciones anteriores (compileSdk, defaultConfig, etc.)
 
     buildFeatures {
         compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8"
     }
     namespace = "com.matetasks.app"
     compileSdk = 34
@@ -76,5 +72,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+
+    implementation("androidx.activity:activity-compose:1.8.2")
 
 }

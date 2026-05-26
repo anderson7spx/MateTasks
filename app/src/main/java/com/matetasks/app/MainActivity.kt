@@ -13,14 +13,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            // Aplicamos el tema base de Material Design 3
             MaterialTheme {
-                // Un contenedor de superficie que usa el color de fondo del tema
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // Llamamos a nuestra pantalla principal de tareas
                     TasksScreen()
                 }
             }

@@ -2,11 +2,13 @@ package com.matetasks.app.presentation.tasks
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.matetasks.app.domain.model.Task
+import com.matetasks.app.domain.model.TaskPriority
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import com.matetasks.app.domain.model.Priority
+import com.matetasks.app.domain.model.Task
 
 class TasksViewModel : ViewModel() {
 
@@ -33,7 +35,7 @@ class TasksViewModel : ViewModel() {
                     description = "Resolver los ejercicios de ecuaciones lineales",
                     scheduledDate = "2026-05-26",
                     isCompleted = false,
-                    priority = com.matetasks.app.domain.model.Priority.HIGH,
+                    priority = TaskPriority.HIGH,
                     category = "Estudio"
                 ),
                 Task(
@@ -42,7 +44,7 @@ class TasksViewModel : ViewModel() {
                     description = "Limpieza y tensión para el fin de semana",
                     scheduledDate = "2026-05-27",
                     isCompleted = true,
-                    priority = com.matetasks.app.domain.model.Priority.MEDIUM,
+                    priority = TaskPriority.MEDIUM,
                     category = "Mantenimiento"
                 )
             )
