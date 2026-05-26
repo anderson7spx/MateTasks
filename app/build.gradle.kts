@@ -43,6 +43,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.8" // Versión compatible con Kotlin 1.9.22
+    }
 }
 
 dependencies {
@@ -67,6 +74,7 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3") // Componentes de diseño Material 3
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0") // Para conectar ViewModels con Compose
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+
 }
